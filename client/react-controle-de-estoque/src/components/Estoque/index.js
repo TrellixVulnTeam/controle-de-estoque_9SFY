@@ -5,8 +5,10 @@ const ListItem = ({ data }) => {
     return (
         <>
             <li className="list-item">
-                <p>{data?.nome}</p>
-                <p>{data?.quantidade}</p>
+                <div className="data">
+                    <p>{data?.nome}</p>
+                    <p>{data?.quantidade}</p>
+                </div>
                 <div className="buttons">
                     <button className="btn-edit">Editar</button>
                     <button className="btn-delete">Excluir</button>  

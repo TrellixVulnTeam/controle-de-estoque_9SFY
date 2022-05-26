@@ -17,4 +17,18 @@ main {
     align-items: center;
     flex-direction: row;
     justify-content: space-evenly;
+    margin: 10px 0;
+}
+
+.list-header .btn-register {
+    padding: 0.4rem;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.list-header .attributtes {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 40%;
 }

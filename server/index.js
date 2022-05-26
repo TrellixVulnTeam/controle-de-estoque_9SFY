@@ -19,6 +19,19 @@ app.get('/getEstoques', (req, res) => {
     });
 });
 
+//READ - Produto
+
+app.get('/produtos/getProdutos', (req, res) => {
+    db.serialize(() => {
+        db.all("SELECT id, nome, preco, descricao FROM produto", function(err, row) {
+            if(err) {
+                return console.log('Nao foi possivel exibir os produtos...');
+            }
+            res.send(row);
+        });
+    });
+});
+
 app.listen(3001, () => {
     console.log("Server Listening !");
 });

@@ -17,6 +17,11 @@ header ul {
 header ul li {
     display: inline-block;
     align-items: center;
-    margin-left: 15px;
+    margin-left: 25px;
     cursor: pointer;
+}
+
+.link {
+    text-decoration: none;
+    color: black;
 }
