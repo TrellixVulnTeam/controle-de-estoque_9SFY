@@ -1,0 +1,22 @@
+header {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: red;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header ul li {
+    display: inline-block;
+    align-items: center;
+    margin-left: 15px;
+    cursor: pointer;
+}
