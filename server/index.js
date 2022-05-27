@@ -69,6 +69,17 @@ app.put('/editarEstoque/:id', (req, res) => {
     });
 });
 
+app.put('/debitarProduto/:id', (req, res) => {
+    db.serialize(() => {
+        db.run("UPDATE estoque SET quantidade = ? WHERE id = ?", [req.body.quantidadeAtualizada, req.params.id], function(err, row) {
+            if(err) {
+                return console.log("Nao foi possivel debitar um produto...");
+            }
+            res.send(row);
+        });
+    });
+});
+
 //UPDATE - Produto
 
 app.put('/editarProduto/:id', (req, res) => {
