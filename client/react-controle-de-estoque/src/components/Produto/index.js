@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const ListItem = ({ data }) => {
     return (
@@ -11,7 +12,7 @@ const ListItem = ({ data }) => {
                     <p>{data?.descricao}</p>
                 </div>
                 <div className="buttons">
-                    <button className="btn-edit">Editar</button>
+                    <Link to={`/editarProduto/${data?.id}`} className="btn-edit">Editar</Link>
                     <button className="btn-delete">Excluir</button>  
                 </div>
             </li>        

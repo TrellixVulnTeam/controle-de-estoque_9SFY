@@ -56,6 +56,32 @@ app.post('/cadastrarEstoque', (req, res) => {
     });
 });
 
+//UPDATE - Estoque
+
+app.put('/editarEstoque/:id', (req, res) => {
+    db.serialize(() => {
+        db.run("UPDATE estoque SET nomeEstoque = ?, quantidade = ?, idProduto = ? WHERE id = ? ", [req.body.novoNome, req.body.novaQuantidade, req.body.novoProduto, req.params.id], function(err, row) {
+            if(err) {
+                console.log("Nao foi possivel editar o estoque...");
+            }
+            res.send(row);
+        });
+    });
+});
+
+//UPDATE - Produto
+
+app.put('/editarProduto/:id', (req, res) => {
+    db.serialize(() => {
+        db.run("UPDATE produto SET nomeProduto = ?, preco = ?, descricao = ? WHERE id = ? ", [req.body.novoNome, req.body.novoPreco, req.body.novaDescricao, req.params.id], function(err, row) {
+            if(err) {
+                console.log("Nao foi possivel editar o produto...");
+            }
+            res.send(row);
+        });
+    });
+});
+
 app.listen(3001, () => {
     console.log("Server Listening !");
 });
