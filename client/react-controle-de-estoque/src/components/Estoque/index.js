@@ -6,8 +6,9 @@ const ListItem = ({ data }) => {
         <>
             <li className="list-item">
                 <div className="data">
-                    <p>{data?.nome}</p>
+                    <p>{data?.nomeEstoque}</p>
                     <p>{data?.quantidade}</p>
+                    <p>{data?.nomeProduto}</p>
                 </div>
                 <div className="buttons">
                     <button className="btn-edit">Editar</button>

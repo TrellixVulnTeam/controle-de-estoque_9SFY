@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 import Header from '../../components/Header';
 import List from "../../components/List/index.js";
 import Produto from '../../components/Produto/index.js';
@@ -31,7 +32,7 @@ const ProdutoPage = () => {
                             <p>Preço</p>
                             <p>Descrição</p>
                         </div>
-                        <button className="btn-register">Cadastrar Produto</button>
+                        <Link to='/cadastrarProduto' className="btn-register">Cadastrar Produto</Link>
                     </div>
                     <List>
                         {produtos.map((produto, index) => {

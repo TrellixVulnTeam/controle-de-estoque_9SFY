@@ -6,8 +6,8 @@ const ListItem = ({ data }) => {
             <li className="list-item">
                 <div className="data">
                     <p>{data?.id}</p>
-                    <p>{data?.nome}</p>
-                    <p>{data?.preco}</p>
+                    <p>{data?.nomeProduto}</p>
+                    <p>R$ {Math.floor(data?.preco)}</p>
                     <p>{data?.descricao}</p>
                 </div>
                 <div className="buttons">

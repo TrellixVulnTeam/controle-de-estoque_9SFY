@@ -10,7 +10,7 @@ app.use(express.json());
 //READ - Estoque
 app.get('/getEstoques', (req, res) => {
     db.serialize(() => {
-        db.all("SELECT id, nome, quantidade FROM estoque", function(err, row) {
+        db.all("SELECT e.id, e.nomeEstoque, e.quantidade, p.nomeProduto FROM estoque AS e INNER JOIN produto AS p ON (e.idProduto = p.id)", function(err, row) {
             if(err) {
                 return console.log('Nao foi possivel exibir os estoques...');
             }
@@ -23,7 +23,7 @@ app.get('/getEstoques', (req, res) => {
 
 app.get('/produtos/getProdutos', (req, res) => {
     db.serialize(() => {
-        db.all("SELECT id, nome, preco, descricao FROM produto", function(err, row) {
+        db.all("SELECT id, nomeProduto, preco, descricao FROM produto", function(err, row) {
             if(err) {
                 return console.log('Nao foi possivel exibir os produtos...');
             }

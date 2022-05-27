@@ -1,0 +1,21 @@
+.main-cadastro {
+    display: grid;
+    place-items: center;   
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.input-field {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin: 10px 0;
+}
+
+.input-field input[type='text'] {
+    margin-left: 15px;
+}
