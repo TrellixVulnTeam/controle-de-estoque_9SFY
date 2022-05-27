@@ -9,6 +9,14 @@
     flex-direction: column;
 }
 
+.container h1 {
+    margin-bottom: 25px;
+}
+
+label {
+    font-size: 1rem;
+}
+
 .input-field {
     display: flex;
     align-items: center;
@@ -18,4 +26,28 @@
 
 .input-field input[type='text'] {
     margin-left: 15px;
+    padding: 0.4rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    border: solid 1px #15133C;
+}
+
+.btn-cadastrar {
+    margin-top: 20px;
+    padding: 0.4rem;
+    font-size: 1rem;
+    outline: none;
+    border: none;
+    color: #15133C;
+    background: #EC994B;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.btn-cadastrar:hover {
+    color: #F1EEE9;
+    transform: scale(1.1);
 }

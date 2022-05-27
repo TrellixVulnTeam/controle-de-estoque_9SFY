@@ -2,6 +2,13 @@ main {
     width: 100%;
     height: 90vh;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main h1 {
+    margin-top: 15px;
+    color: #15133C;
 }
 
 .list-container {
@@ -17,13 +24,24 @@ main {
     align-items: center;
     flex-direction: row;
     justify-content: space-evenly;
-    margin: 10px 0;
+    margin: 30px 0;
+    color: #15133C;
 }
 
 .list-header .btn-register {
     padding: 0.4rem;
     font-size: 15px;
     cursor: pointer;
+    background: #EC994B;
+    text-decoration: none;
+    color: #15133C;
+    border-radius: 4px;
+    transition: 0.2s all ease;
+}
+
+.list-header .btn-register:hover {
+    color: #F1EEE9;
+    transform: scale(1.1);
 }
 
 .list-header .attributtes {

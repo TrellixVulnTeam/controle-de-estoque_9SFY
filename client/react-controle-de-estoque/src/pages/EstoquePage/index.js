@@ -25,6 +25,7 @@ const EstoquePage = () => {
         <>
             <Header />
             <main>
+                <h1>Estoques</h1>
                 <div className="list-container">
                     <div className="list-header">
                         <div className="attributtes">

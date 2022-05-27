@@ -4,7 +4,8 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    background: red;
+    background: #15133C;
+    color: #F1EEE9;
 }
 
 header ul {
@@ -23,5 +24,10 @@ header ul li {
 
 .link {
     text-decoration: none;
-    color: black;
+    color: #F1EEE9;
+    cursor: pointer;
+}
+
+.link:hover {
+    text-decoration: underline #F1EEE9;
 }

@@ -24,6 +24,7 @@ const ProdutoPage = () => {
         <>
             <Header />
             <main>
+                <h1>Produtos</h1>
                 <div className="list-container">
                     <div className="list-header">
                         <div className="attributtes">

@@ -1,12 +1,21 @@
 .list-item {
-    width: 100%;
+    width: 90%;
     display: flex;
     align-items: center;
     flex-direction: row;
     justify-content: space-around;
     height: 10vh;
     padding: 0.4rem;
-    margin-top: 5px
+    margin-top: 5px;
+    background: #73777B;
+    border-radius: 4px;
+    color: #F1EEE9;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.list-item:hover {
+    background: rgba(0, 0, 0, 0.4);
 }
 
 .data {
@@ -17,16 +26,43 @@
 }
 
 .btn-edit {
+    padding: 0.4rem;
+    font-size: 15px;
+    cursor: pointer;
+    background: #EC994B;
     text-decoration: none;
-    padding: 0.2rem;
+    color: #15133C;
+    border-radius: 4px;
+    transition: 0.2s all ease;
 }
 
 .btn-delete {
-    padding: 0.2rem;
+    padding: 0.4rem;
+    font-size: 15px;
+    cursor: pointer;
+    background: #EC994B;
+    text-decoration: none;
+    color: #15133C;
+    border-radius: 4px;
+    transition: 0.2s all ease;
     margin-left: 20px;
+    border: none;
 }
 
 .btn-debitar {
     margin-left: 20px;
-    padding: 0.2rem;
+    padding: 0.4rem;
+    font-size: 15px;
+    cursor: pointer;
+    background: #EC994B;
+    text-decoration: none;
+    color: #15133C;
+    border-radius: 4px;
+    transition: 0.2s all ease;
+    border: none;
+}
+
+.btn-debitar:hover, .btn-edit:hover, .btn-delete:hover {
+    color: #F1EEE9;
+    transform: scale(1.05);
 }
