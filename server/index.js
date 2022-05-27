@@ -32,6 +32,30 @@ app.get('/produtos/getProdutos', (req, res) => {
     });
 });
 
+//CREATE - Produto
+
+app.post('/cadastrarProduto', (req, res) => {
+    db.serialize(() => {
+        db.run("INSERT INTO produto(nomeProduto, preco, descricao) VALUES(?, ?, ?)", [req.body.nome, req.body.preco, req.body.descricao], function(err) {
+            if(err) {
+                return console.log('Nao foi possivel cadastrar o produto...');
+            }
+        });
+    });
+});
+
+//CREATE - Estoque
+
+app.post('/cadastrarEstoque', (req, res) => {
+    db.serialize(() => {
+        db.run("INSERT INTO estoque(nomeEstoque, quantidade, idProduto) VALUES(?, ?, ?)", [req.body.nome, req.body.quantidade, req.body.produto], function(err) {
+            if(err) {
+                return console.log('Nao foi possivel cadastrar o estoque...');
+            }
+        });
+    });
+});
+
 app.listen(3001, () => {
     console.log("Server Listening !");
 });
