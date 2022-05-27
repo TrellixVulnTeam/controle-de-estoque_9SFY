@@ -1,6 +1,6 @@
 # Sistema de controle de estoque 📝
 
-### Um pouco do projeto: Ele é um sistema de controle de estoque ao qual se podem cadastrar, editar, deletar e listar produtos e seus respectivos estoques, aos quais possuem um id, nome e a quantidade do produto cadastrado, que possúi um id, um nome, preço e uma descrição(opcional).
+### Um pouco do projeto: Ele é um sistema de controle de estoque ao qual se podem cadastrar, editar, deletar e listar produtos e seus respectivos estoques, aos quais possuem um id, nome e a quantidade do produto cadastrado, que possui um id, um nome, preço e uma descrição(opcional).
 
 ## Tecnologias utilizadas:
 
