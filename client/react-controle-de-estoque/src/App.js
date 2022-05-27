@@ -19,6 +19,8 @@ function App() {
           <Route path='/cadastrarProduto' element={<CadastroProduto />} />
           <Route path='/editarEstoque/:id' element={<AtualizacaoEstoque />} />
           <Route path='/editarProduto/:id' element={<AtualizacaoProduto />} />
+          <Route path='/deletarProduto/:id' />
+          <Route path='/deletarEstoque/:id' />
         </Routes>
       </BrowserRouter>
     </>

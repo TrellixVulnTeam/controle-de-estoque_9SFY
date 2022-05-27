@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useState } from 'react';
+import { useParams } from 'react-router-dom';
 import Header from '../../components/Header/index.js';
 
 const AtualizacaoProduto = () => {
@@ -8,8 +9,10 @@ const AtualizacaoProduto = () => {
     const [ inputNovoPreco, setInputNovoPreco ] = useState('');
     const [ inputNovaDescricao, setInputNovaDescricao ] = useState('');
 
+    const { id } = useParams();
+
     function editProduto() {
-        axios.put('http://localhost:3001/editarProduto/:id', {
+        axios.put(`http://localhost:3001/editarProduto/${id}`, {
             novoNome: inputNovoNome,
             novoPreco: inputNovoPreco,
             novaDescricao: inputNovaDescricao

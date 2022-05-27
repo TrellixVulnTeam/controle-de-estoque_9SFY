@@ -15,7 +15,6 @@ const EstoquePage = () => {
             setEstoques(response.data);
             console.log(response)
         });
-
     }
 
     useEffect(() => {

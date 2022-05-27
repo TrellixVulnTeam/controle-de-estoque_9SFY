@@ -1,7 +1,16 @@
 import React from "react";
+import axios from 'axios';
 import { Link } from "react-router-dom";
 
 const ListItem = ({ data }) => {
+
+    function deleteProduto() {
+        axios.delete(`http://localhost:3001/deletarProduto/${data?.id}`)
+        .then((response) => console.log(response));
+
+        alert('Produto Excluido com sucesso !');
+    }
+
     return (
         <>
             <li className="list-item">
@@ -13,7 +22,7 @@ const ListItem = ({ data }) => {
                 </div>
                 <div className="buttons">
                     <Link to={`/editarProduto/${data?.id}`} className="btn-edit">Editar</Link>
-                    <button className="btn-delete">Excluir</button>  
+                    <button className="btn-delete" onClick={() => deleteProduto()}>Excluir</button>  
                 </div>
             </li>        
         </>

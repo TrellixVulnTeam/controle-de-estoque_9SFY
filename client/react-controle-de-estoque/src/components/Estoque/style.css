@@ -17,10 +17,16 @@
 }
 
 .btn-edit {
+    text-decoration: none;
     padding: 0.2rem;
 }
 
 .btn-delete {
     padding: 0.2rem;
     margin-left: 20px;
+}
+
+.btn-debitar {
+    margin-left: 20px;
+    padding: 0.2rem;
 }
